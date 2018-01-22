@@ -24,7 +24,7 @@ void *monitor_pid(void *) {
 
         // If this is a release build, the child will segfault (status 11). Otherwise, waitpid() should never return.
 
-        _exit(0); // Commit seppuku
+        pthread_exit(0); // Commit seppuku
     }
 
     pthread_exit(NULL);
